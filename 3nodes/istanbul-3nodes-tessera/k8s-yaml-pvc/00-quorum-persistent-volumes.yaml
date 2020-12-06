@@ -1,0 +1,52 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+
+  name: quorum-node1-pvc
+  namespace: quorum
+  annotations:
+spec:
+
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 200Mi
+  storageClassName: rook-ceph-block
+
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+
+  name: quorum-node2-pvc
+  namespace: quorum
+  annotations:
+spec:
+
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 200Mi
+  storageClassName: rook-ceph-block
+
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+
+  name: quorum-node3-pvc
+  namespace: quorum
+  annotations:
+spec:
+
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 200Mi
+  storageClassName: rook-ceph-block
